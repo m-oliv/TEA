@@ -22,20 +22,23 @@
       </div>
     </md-toolbar>
     <md-content layout="row" layout-xs="column" layout-align="center center">
+      <h1>How long is your task going to take until completion?</h1>
+    </md-content>
+    <md-content layout="row" layout-xs="column" layout-align="center center">
       <md-input-container class="md-icon-float md-icon-right md-block">
       <label>Best Case</label>
       <md-icon class="mdi mdi-clock mdi-24px"></md-icon>
-      <input ng-model="user.donation" type="number" step="0.01">
+      <input ng-model="user.donation" type="number" step="0.01" placeholder="0.0">
     </md-input-container>
     <md-input-container class="md-icon-float md-icon-right md-block">
       <label>Middle Ground</label>
       <md-icon class="mdi mdi-clock mdi-24px"></md-icon>
-      <input ng-model="user.donation" type="number" step="0.01">
+      <input ng-model="user.donation" type="number" step="0.01" placeholder="0.0">
     </md-input-container>
     <md-input-container class="md-icon-float md-icon-right md-block">
       <label>Worst Case</label>
       <md-icon class="mdi mdi-clock mdi-24px"></md-icon>
-      <input ng-model="user.donation" type="number" step="0.01">
+      <input ng-model="user.donation" type="number" step="0.01" placeholder="0.0">
     </md-input-container>
     </md-content>
     <md-content layout="row" layout-xs="column" layout-align="center center">
@@ -46,8 +49,8 @@
       <md-card>
         <md-card-actions>
           <md-button class="md-icon-button" ng-click="showSearch = !showSearch" aria-label="Back">
-          <md-tooltip md-direction="bottom">Close</md-tooltip>
-          <md-icon class="mdi mdi-close mdi-24px"></md-icon>
+          <md-tooltip md-direction="bottom">How did we get this value?</md-tooltip>
+          <md-icon class="mdi mdi-help-circle-outline mdi-24px"></md-icon>
         </md-button>
         <md-button class="md-icon-button" ng-click="showSearch = !showSearch" aria-label="Back">
           <md-tooltip md-direction="bottom">Close</md-tooltip>
