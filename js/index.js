@@ -31,7 +31,7 @@ angular.module('TEA', ['ngMaterial', 'TEA.services.DialogService'])
             $scope.showEstimation = true;
             return $scope.estimation = (best +
                 worst + 2 * middle) / 4;
-        }
+        };
 
         $scope.clearEstimation = function () {
             $scope.bestCaseGuess = 0.0;
@@ -39,7 +39,14 @@ angular.module('TEA', ['ngMaterial', 'TEA.services.DialogService'])
             $scope.worstCaseGuess = 0.0;
             $scope.estimation = 0.0;
             $scope.showEstimation = false;
-        }
+        };
+
+        $scope.showInfo = function(){
+            DialogService.showAlert(null,
+            "How do we do this estimation?",
+            "You do three estimates for each piece of work:\nA - Best Case Scenario\nB - Worst Case Scenario\nC - Middle Ground (what it'll probably take)\nEstimation = (A+B+2C)/4",
+            "Close");
+        };
     });
 /*
 Copyright 2016 Google Inc. All Rights Reserved. 
