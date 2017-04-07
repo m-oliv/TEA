@@ -31,7 +31,7 @@
         </md-card-actions>
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline">
+            <span class="md-headline" layout-align="center none">
               How long is your task going to take until completion?
               </span>
           </md-card-title-text>
@@ -41,21 +41,21 @@
             <div flex>
               <md-input-container class="md-icon-float md-icon-right md-block">
                 <label>Best Case (in hours)</label>
-                <input ng-model="bestCaseGuess" type="number" step="0.1" placeholder="0.0" required>
+                <input class="align-right" ng-model="bestCaseGuess" type="number" step="0.1" placeholder="0.0" required>
               </md-input-container>
             </div>
 
             <div flex>
               <md-input-container class="md-icon-float md-icon-right md-block">
                 <label>Middle Ground (in hours)</label>
-                <input ng-model="middleGroundGuess" type="number" step="0.1" placeholder="0.0" required>
+                <input class="align-right" ng-model="middleGroundGuess" type="number" step="0.1" placeholder="0.0" required>
               </md-input-container>
             </div>
 
             <div flex>
               <md-input-container class="md-icon-float md-icon-right md-block">
                 <label>Worst Case (in hours)</label>
-                <input ng-model="worstCaseGuess" type="number" step="0.1" placeholder="0.0" required>
+                <input class="align-right" ng-model="worstCaseGuess" type="number" step="0.1" placeholder="0.0" required>
               </md-input-container>
             </div>
           </div>
@@ -70,10 +70,6 @@
     </md-content>
   </div>
 
-  <!--
-Copyright 2016 Google Inc. All Rights Reserved. 
-Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
--->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-aria.js'></script>
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js'></script>
