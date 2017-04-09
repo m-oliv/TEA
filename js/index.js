@@ -26,7 +26,13 @@ angular.module('TEA', ['ngMaterial', 'TEA.services.DialogService'])
             $log.debug("best case: "+best);
             $log.debug("middle case: "+middle);
             $log.debug("worst case: "+worst);
-            
+    
+            $scope.estimation = 0.0;;
+
+            $scope.showClear = best !== 0
+            && middle !==0
+            && worst !==0;
+
             return $scope.estimation = (best +
                 worst + 2 * middle) / 4;
         };
