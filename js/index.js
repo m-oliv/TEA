@@ -20,15 +20,13 @@ angular.module('TEA', ['ngMaterial', 'TEA.services.DialogService'])
         $scope.middleGroundGuess = 0.0;
         $scope.worstCaseGuess = 0.0;
         $scope.estimation = 0.0;
-        $scope.showEstimation = false;
 
         $scope.onEstimateClick = function (best, middle, worst) {
         
             $log.debug("best case: "+best);
             $log.debug("middle case: "+middle);
             $log.debug("worst case: "+worst);
-
-            $scope.showEstimation = true;
+            
             return $scope.estimation = (best +
                 worst + 2 * middle) / 4;
         };
@@ -38,7 +36,6 @@ angular.module('TEA', ['ngMaterial', 'TEA.services.DialogService'])
             $scope.middleGroundGuess = 0.0;
             $scope.worstCaseGuess = 0.0;
             $scope.estimation = 0.0;
-            $scope.showEstimation = false;
         };
 
         $scope.showInfo = function(){

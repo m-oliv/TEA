@@ -19,16 +19,14 @@
           </md-button>
           TEA - Time Estimation App
         </h2>
+        <md-button class="md-icon-button" ng-click="showInfo()" aria-label="Back">
+          <md-tooltip md-direction="bottom">How did we get this value?</md-tooltip>
+          <md-icon class="mdi mdi-help-circle-outline mdi-24px"></md-icon>
+        </md-button>
       </div>
     </md-toolbar>
-    <md-content ng-show="showEstimation">
+    <md-content>
       <md-card>
-        <md-card-actions>
-          <md-button class="md-icon-button" ng-click="showInfo()" aria-label="Back">
-            <md-tooltip md-direction="bottom">How did we get this value?</md-tooltip>
-            <md-icon class="mdi mdi-help-circle-outline mdi-24px"></md-icon>
-          </md-button>
-        </md-card-actions>
         <md-card-title>
           <md-card-title-text style="text-align:center;">
             <span class="md-headline" layout-align="center none">
@@ -39,7 +37,7 @@
         <md-card-content>
           <div layout="row" layout-xs="column" layout-align="center center">
             <div flex>
-              <md-input-container class="md-icon-float md-icon-right md-block">
+              <md-input-container class="md-icon-float md-icon-right md-block" style="margin: 0 auto;">
                 <label>Best Case (h)</label>
                 <input class="align-right" ng-model="bestCaseGuess" type="number" step="0.1" placeholder="0.0" required>
               </md-input-container>
@@ -57,6 +55,13 @@
                 <label>Worst Case (h)</label>
                 <input class="align-right" ng-model="worstCaseGuess" type="number" step="0.1" placeholder="0.0" required>
               </md-input-container>
+            </div>
+
+            <div flex>
+              <md-button class="md-icon-button" ng-click="clearEstimation()" aria-label="Back">
+                <md-tooltip md-direction="bottom">Clear</md-tooltip>
+                <md-icon class="mdi mdi-broom mdi-24px"></md-icon>
+              </md-button>
             </div>
           </div>
 
