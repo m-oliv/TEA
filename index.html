@@ -14,10 +14,10 @@
   <div ng-controller="TEAController" ng-cloak flex="100">
     <md-toolbar class="md-hue-2" layout="column" layout-align="center center" ng-show="!showSearch">
       <div class="md-toolbar-tools">
-        <h2 flex md-truncate layout-align="center">
-          <md-button class="md-icon-button" aria-label="logo">
+        <md-button id="logoButton" class="md-icon-button" aria-label="logo" ng-disabled="true">
             <md-icon class="mdi mdi-clock mdi-24px"></md-icon>
           </md-button>
+        <h2 flex md-truncate layout-align="center">
           TEA - Time Estimation App
         </h2>
         <md-button class="md-icon-button" ng-click="showInfo()" aria-label="Back">

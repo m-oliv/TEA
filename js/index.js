@@ -47,7 +47,7 @@ angular.module('TEA', ['ngMaterial', 'TEA.services.DialogService'])
         $scope.showInfo = function(){
             DialogService.showAlert(null,
             "How do we do this estimation?",
-            "You do three estimates for each piece of work:\nA - Best Case Scenario\nB - Worst Case Scenario\nC - Middle Ground (what it'll probably take)\nEstimation = (A+B+2C)/4",
+            "You do three estimates for each piece of work: A - Best Case Scenario; B - Worst Case Scenario; C - Middle Ground (what it'll probably take); Estimation = (A+B+2C)/4",
             "Close");
         };
     });
