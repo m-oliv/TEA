@@ -21,6 +21,9 @@ angular.module('TEA', ['ngMaterial', 'TEA.services.DialogService'])
         $scope.worstCaseGuess = 0.0;
         $scope.estimation = 0.0;
 
+        /**
+         * Perform the estimation and enable the 'clear' button.
+         */
         $scope.onEstimateClick = function (best, middle, worst) {
         
             $log.debug("best case: "+best);
@@ -37,6 +40,9 @@ angular.module('TEA', ['ngMaterial', 'TEA.services.DialogService'])
                 worst + 2 * middle) / 4;
         };
 
+        /**
+         * Clear the input fields.
+         */
         $scope.clearEstimation = function () {
             $scope.bestCaseGuess = 0.0;
             $scope.middleGroundGuess = 0.0;
@@ -44,6 +50,10 @@ angular.module('TEA', ['ngMaterial', 'TEA.services.DialogService'])
             $scope.estimation = 0.0;
         };
 
+        /**
+         * Show the dialog that informs the user 
+         * on the methodology of the estimation.
+         */
         $scope.showInfo = function(){
             DialogService.showAlert(null,
             "How do we do this estimation?",
