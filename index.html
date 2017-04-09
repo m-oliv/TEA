@@ -15,7 +15,7 @@
     <md-toolbar class="md-hue-2" layout="column" layout-align="center center" ng-show="!showSearch">
       <div class="md-toolbar-tools">
         <h2 flex md-truncate layout-align="center">
-          <md-button class="md-icon-button" style="color: white;">
+          <md-button class="md-icon-button" aria-label="logo">
             <md-icon class="mdi mdi-clock mdi-24px"></md-icon>
           </md-button>
           TEA - Time Estimation App
@@ -29,7 +29,7 @@
     <md-content>
       <md-card>
         <md-card-title>
-          <md-card-title-text style="">
+          <md-card-title-text>
             <span class="md-headline" layout-align="center none">
               How long is your task going to take until completion?
               </span>
@@ -64,8 +64,8 @@
             <h1>{{onEstimateClick(bestCaseGuess, middleGroundGuess, worstCaseGuess)}} hours</h1>
           </div>
 
-          <div layout="row" layout="column" layout-align="center center" ng-disabled="!showClear">
-            <md-button class="md-icon-button" ng-click="clearEstimation()" aria-label="Back">
+          <div layout="row" layout="column" layout-align="center center" ng-show="showClear">
+            <md-button class="md-icon-button md-primary" ng-click="clearEstimation()" aria-label="Back">
               <md-tooltip md-direction="bottom">Clear</md-tooltip>
               <md-icon class="mdi mdi-broom mdi-24px"></md-icon>
             </md-button>

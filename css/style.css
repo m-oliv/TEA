@@ -1,3 +1,13 @@
 md-card-title-text{
     text-align:center !important;
 }
+
+h2 > md-button{
+    color: white;
+}
+
+md-card-content{
+    margin: 0 auto;
+    width: 95vw;
+    float:center;
+}
