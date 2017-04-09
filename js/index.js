@@ -25,19 +25,23 @@ angular.module('TEA', ['ngMaterial', 'TEA.services.DialogService'])
          * Perform the estimation and enable the 'clear' button.
          */
         $scope.onEstimateClick = function (best, middle, worst) {
-        
-            $log.debug("best case: "+best);
-            $log.debug("middle case: "+middle);
-            $log.debug("worst case: "+worst);
-    
-            $scope.estimation = 0.0;;
 
-            $scope.showClear = best !== 0
-            && middle !==0
-            && worst !==0;
+            $log.debug("best case: " + best);
+            $log.debug("middle case: " + middle);
+            $log.debug("worst case: " + worst);
 
-            return $scope.estimation = (best +
-                worst + 2 * middle) / 4;
+            $scope.estimation = 0.0;
+
+            $scope.showClear = best !== 0 &&
+                middle !== 0 &&
+                worst !== 0;
+
+            if (best === undefined || worst === undefined || middle === undefined) {
+                return 0.0;
+            } else {
+                return $scope.estimation = (best +
+                    worst + 2 * middle) / 4;
+            }
         };
 
         /**
@@ -54,10 +58,10 @@ angular.module('TEA', ['ngMaterial', 'TEA.services.DialogService'])
          * Show the dialog that informs the user 
          * on the methodology of the estimation.
          */
-        $scope.showInfo = function(){
+        $scope.showInfo = function () {
             DialogService.showAlert(null,
-            "How do we do this estimation?",
-            "You do three estimates for each piece of work: A - Best Case Scenario; B - Worst Case Scenario; C - Middle Ground (what it'll probably take); Estimation = (A+B+2C)/4",
-            "Close");
+                "How do we do this estimation?",
+                "You do three estimates for each piece of work: A - Best Case Scenario; B - Worst Case Scenario; C - Middle Ground (what it'll probably take); Estimation = (A+B+2C)/4",
+                "Close");
         };
     });
